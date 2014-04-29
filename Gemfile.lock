@@ -31,6 +31,8 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     angularjs-rails (1.2.16)
+    annotate (2.5.0)
+      rake
     arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.0.1)
@@ -92,6 +94,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.1.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -122,11 +127,13 @@ PLATFORMS
 DEPENDENCIES
   activerecord-postgresql-adapter
   angularjs-rails
+  annotate
   devise
   haml
   haml-rails
   pg
   rails (= 3.2.14)
   sass-rails (~> 3.2.3)
+  simple_form
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
