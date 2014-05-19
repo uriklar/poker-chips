@@ -9,5 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap
  *= require_tree .
  */
+
+ .container-fluid, .header {
+ 	padding-right: 40px !important;
+ 	padding-left: 40px !important;
+ }
+
+

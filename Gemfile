@@ -7,6 +7,8 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
+gem 'simple_form'
+gem 'bcrypt-ruby'
 
 
 # Gems used only for assets and not required
@@ -23,6 +25,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+	gem 'annotate'
 end
 
 # To use ActiveModel has_secure_password
