@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 - model_class = User
 .page-header
   %h1=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize
 = render :partial => "form"
+=======
+%h1 New user
+
+= render 'form'
+
+= link_to 'Back', users_path
+>>>>>>> devise-views

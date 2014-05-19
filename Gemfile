@@ -7,8 +7,13 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
+<<<<<<< HEAD
 gem 'devise'
 gem 'simple_form'
+=======
+gem 'simple_form'
+gem 'bcrypt-ruby'
+>>>>>>> devise-views
 
 
 # Gems used only for assets and not required
@@ -27,8 +32,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+<<<<<<< HEAD
 group :development, :test do
   gem 'annotate'
+=======
+group :development do
+	gem 'annotate'
+>>>>>>> devise-views
 end
 
 # To use ActiveModel has_secure_password

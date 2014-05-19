@@ -1,8 +1,21 @@
 PokerChips::Application.routes.draw do
+<<<<<<< HEAD
   devise_for :users
+=======
+  resources :users
+
+>>>>>>> devise-views
 
   get "pages/home"
   root to: "pages#home"
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
+
 
   resources :users
 

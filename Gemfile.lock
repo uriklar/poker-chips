@@ -34,7 +34,10 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.3)
+<<<<<<< HEAD
     atomic (1.1.14)
+=======
+>>>>>>> devise-views
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     devise (3.2.2)
@@ -128,7 +131,11 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   angularjs-rails
   annotate
+<<<<<<< HEAD
   devise
+=======
+  bcrypt-ruby
+>>>>>>> devise-views
   haml
   haml-rails
   pg

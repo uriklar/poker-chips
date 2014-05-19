@@ -18,7 +18,11 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
+<<<<<<< HEAD
       post :create, user: { amount_selling: @user.amount_selling, email: @user.email, first_name: @user.first_name, last_name: @user.last_name, password: @user.password, username: @user.username }
+=======
+      post :create, user: { amount_selling: @user.amount_selling, email: @user.email, password_digest: @user.password_digest, remember_token: @user.remember_token, username: @user.username }
+>>>>>>> devise-views
     end
 
     assert_redirected_to user_path(assigns(:user))
@@ -35,7 +39,11 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
+<<<<<<< HEAD
     put :update, id: @user, user: { amount_selling: @user.amount_selling, email: @user.email, first_name: @user.first_name, last_name: @user.last_name, password: @user.password, username: @user.username }
+=======
+    put :update, id: @user, user: { amount_selling: @user.amount_selling, email: @user.email, password_digest: @user.password_digest, remember_token: @user.remember_token, username: @user.username }
+>>>>>>> devise-views
     assert_redirected_to user_path(assigns(:user))
   end
 
