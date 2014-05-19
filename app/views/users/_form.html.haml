@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 = simple_form_for @user, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :email
-  = f.input :encrypted_password
-  = f.input :reset_password_token
-  = f.input :reset_password_sent_at
-  = f.input :remember_created_at
-  = f.input :current_sign_in_at
-  = f.input :last_sign_in_at
-  = f.input :current_sign_in_ip
-  = f.input :last_sign_in_ip
-  = f.input :first_name
-  = f.input :last_name
-  = f.input :username
-  = f.input :amount_selling
-  .form-actions
-    = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn'
-=======
-= simple_form_for @user do |f|
   - if @user.errors.any?
     #error_explanation
       %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
@@ -37,4 +18,4 @@
     = f.input :username
   .actions
     = f.submit 'Save'
->>>>>>> devise-views
+
