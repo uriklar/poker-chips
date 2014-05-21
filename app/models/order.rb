@@ -19,7 +19,6 @@ class Order < ActiveRecord::Base
   attr_accessor :card_number, :expiry_month, :expiry_year, :verification_code, :cardholder_fname, :cardholder_lname
 
   has_many :transactions, class_name: 'OrderTransaction', dependent: :destroy
-  belongs_to :booking
 	aasm_column :state
 	aasm do
 		state :pending, initial: true

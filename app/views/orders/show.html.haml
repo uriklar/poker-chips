@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Amount:
+  = @order.amount
+%p
+  %b Card number:
+  = @order.card_number
+%p
+  %b Expiry month:
+  = @order.expiry_month
+%p
+  %b Expiry year:
+  = @order.expiry_year
+%p
+  %b Verification code:
+  = @order.verification_code
+%p
+  %b Cardholder fname:
+  = @order.cardholder_fname
+%p
+  %b Cardholder lname:
+  = @order.cardholder_lname
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path

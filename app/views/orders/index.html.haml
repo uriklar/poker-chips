@@ -1,0 +1,31 @@
+%h1 Listing orders
+
+%table
+  %tr
+    %th Amount
+    %th Card number
+    %th Expiry month
+    %th Expiry year
+    %th Verification code
+    %th Cardholder fname
+    %th Cardholder lname
+    %th
+    %th
+    %th
+
+  - @orders.each do |order|
+    %tr
+      %td= order.amount
+      %td= order.card_number
+      %td= order.expiry_month
+      %td= order.expiry_year
+      %td= order.verification_code
+      %td= order.cardholder_fname
+      %td= order.cardholder_lname
+      %td= link_to 'Show', order
+      %td= link_to 'Edit', edit_order_path(order)
+      %td= link_to 'Destroy', order, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Order', new_order_path

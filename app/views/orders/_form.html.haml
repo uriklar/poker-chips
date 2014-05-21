@@ -1,0 +1,14 @@
+= simple_form_for(@order) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :amount
+    = f.input :card_number
+    = f.input :expiry_month
+    = f.input :expiry_year
+    = f.input :verification_code
+    = f.input :cardholder_fname
+    = f.input :cardholder_lname
+
+  .form-actions
+    = f.button :submit
