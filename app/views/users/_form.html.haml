@@ -1,21 +1,22 @@
-= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f|
-  - if @user.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
-      %ul
-        - @user.errors.full_messages.each do |msg|
-          %li= msg
 
-  .field
-    = f.input :email
-  .field
-    = f.input :password
-  .field
-    = f.input :password_confirmation
-  .field
-    = f.input :amount_selling
-  .field
-    = f.input :username
-  .actions
-    = f.submit 'Save'
+- if @user.errors.any?
+  #error_explanation
+    %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
+
+.field
+  = f.input :email
+.field
+  = f.input :password
+.field
+  = f.input :password_confirmation
+.field
+  = f.input :amount
+.field
+  = f.input :username
+
+= f.input :seller, label: false, :input_html => { :checked => seller, class: "hidden" }
+
 

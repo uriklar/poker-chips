@@ -25,10 +25,15 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @user }
+    if params[:type] == "sell"
+      render "sell"
+    else
+      render "buy"
     end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @user }
+    # end
   end
 
   # GET /users/1/edit
@@ -46,7 +51,13 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
-        format.html { render action: "new" }
+        format.html {
+          if params[:seller] == "1"
+            render "sell"
+          else
+            render "buy"
+          end
+        }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end

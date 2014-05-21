@@ -1,13 +1,14 @@
-.navbar.navbar-fixed-top
-	.navbar-inner
-		.container
-			= link_to "sample app", root_path, id: "logo"
-			.nav
-				%ul.nav.pull-right
-					%li= link_to "Home", root_path
-					- if signed_in?
-						%li= link_to "Profile", current_user
-						%li= link_to "Settings", edit_user_path(current_user)
-						%li= link_to "Sign out", signout_path
-					-else
-						%li= link_to "Sign in", signin_path
+.header
+	%ul.nav.nav-pills.pull-right
+		%li.active
+			= link_to "Home", root_path
+		%li
+			= link_to "About", ""
+		%li
+			= link_to "Contact", ""
+		- if signed_in?
+			%li= link_to "Settings", edit_user_path(current_user)
+			%li= link_to "Sign out", signout_path
+		-else
+			%li= link_to "Sign in", signin_path
+	%h3.text-muted EZMoney

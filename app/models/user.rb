@@ -2,28 +2,19 @@
 #
 # Table name: users
 #
-#  id                     :integer          not null, primary key
-#  email                  :string(255)      default(""), not null
-#  encrypted_password     :string(255)      default(""), not null
-#  reset_password_token   :string(255)
-#  reset_password_sent_at :datetime
-#  remember_created_at    :datetime
-#  sign_in_count          :integer          default(0), not null
-#  current_sign_in_at     :datetime
-#  last_sign_in_at        :datetime
-#  current_sign_in_ip     :string(255)
-#  last_sign_in_ip        :string(255)
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  first_name             :string(255)
-#  last_name              :string(255)
-#  username               :string(255)
-#  amount_selling         :integer
+#  id              :integer          not null, primary key
+#  email           :string(255)
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  amount          :integer
+#  seller          :boolean
+#  username        :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :amount_selling, :email, :password, :password_confirmation, :username
+  attr_accessible :amount, :email, :password, :password_confirmation, :username, :seller
   has_secure_password
 
   #callbacks

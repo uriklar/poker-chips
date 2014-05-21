@@ -17,9 +17,11 @@ ActiveRecord::Schema.define(:version => 20140519030852) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.integer  "amount_selling"
+    t.integer  "amount"
+    t.boolean  "seller"
     t.string   "username"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+
 end

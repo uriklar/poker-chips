@@ -1,2 +1,6 @@
-%h1 Pages#home
-%p Find me in app/views/pages/home.html.haml
+.jumbotron
+	%h1 Buy/Sell you Pokerstars chips
+	%p.lead This is the place where you can buy and sell you poker chips bla bla bla
+	%p
+		= link_to "Sell Chips", new_user_path(type: "sell"), class: "btn btn-lg btn-success", role: "button"
+		= link_to "Buy Chips", new_user_path(type: "buy"), class: "btn btn-lg btn-primary", role: "button"
