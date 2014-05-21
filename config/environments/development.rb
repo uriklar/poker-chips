@@ -35,4 +35,16 @@ PokerChips::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+  end
+
+  config.to_prepare do
+    OrderTransaction.gateway =
+      ActiveMerchant::Billing::RealexGateway.new(
+        login: ENV["REALEX_LOGIN"],
+        password: ENV["REALEX_PASSWORD"]
+      )
+  end
 end

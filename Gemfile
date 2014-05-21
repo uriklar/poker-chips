@@ -9,6 +9,9 @@ gem 'pg'
 gem 'activerecord-postgresql-adapter'
 gem 'simple_form'
 gem 'bcrypt-ruby'
+gem "rails_12factor"
+gem "activemerchant"
+gem "aasm"
 
 
 # Gems used only for assets and not required

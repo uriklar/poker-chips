@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (3.0.26)
     actionmailer (3.2.14)
       actionpack (= 3.2.14)
       mail (~> 2.5.4)
@@ -14,6 +15,17 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_utils (2.0.1)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.42.4)
+      active_utils (~> 2.0, >= 2.0.1)
+      activesupport (>= 2.3.14, < 5.0.0)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (~> 0.5)
+      json (~> 1.7)
+      money (< 7.0.0)
+      nokogiri (~> 1.4)
     activemodel (3.2.14)
       activesupport (= 3.2.14)
       builder (~> 3.0.0)
@@ -60,7 +72,14 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.2)
+    monetize (0.1.3)
+    money (6.0.1)
+      i18n (~> 0.6.4)
+      monetize (~> 0.1.3)
     multi_json (1.9.3)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
@@ -78,6 +97,11 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -120,6 +144,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
+  activemerchant
   activerecord-postgresql-adapter
   angularjs-rails
   annotate
@@ -129,6 +155,7 @@ DEPENDENCIES
   haml-rails
   pg
   rails (= 3.2.14)
+  rails_12factor
   sass-rails (~> 3.2.3)
   simple_form
   twitter-bootstrap-rails
